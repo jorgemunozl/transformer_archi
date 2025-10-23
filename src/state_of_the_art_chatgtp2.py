@@ -1,13 +1,13 @@
 from dataclasses import dataclass
-import torch # the all life torch library
-import torch.nn as nn # Neural Network stuff
-from torch.nn import functional as F #pydantic
+import torch
+import torch.nn as nn
+from torch.nn import functional as F
 import pydantic
 import math
-
-device = 'cuda'
 import tiktoken
 
+
+device = 'cuda'
 """
 max_return_sequences = 7 #Number of answers
 max_length = 100 #Numbers of characters
@@ -28,7 +28,6 @@ x=tokens.to('cuda')
 
 with open('/content/input.txt','r',encoding='utf-8') as f:
 text = f.read()
-
 text= text[:1000]
 tokens = enc.encode(text)
 B, T = 4, 32

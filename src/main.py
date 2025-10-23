@@ -1,7 +1,9 @@
 import tiktoken
 import torch
 from config import MODEL
+from utils import get_device
 
+device = get_device()
 
 model = MODEL(Config())
 model.to(device)
